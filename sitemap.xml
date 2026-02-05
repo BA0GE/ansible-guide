@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://weiguang.github.io/ansible-guide/</loc>
+         <lastmod>2026-02-05</lastmod>
+    </url>
+    <url>
+         <loc>https://weiguang.github.io/ansible-guide/01-concepts/</loc>
+         <lastmod>2026-02-05</lastmod>
+    </url>
+    <url>
+         <loc>https://weiguang.github.io/ansible-guide/02-prerequisites/</loc>
+         <lastmod>2026-02-05</lastmod>
+    </url>
+    <url>
+         <loc>https://weiguang.github.io/ansible-guide/03-deep-dive/</loc>
+         <lastmod>2026-02-05</lastmod>
+    </url>
+    <url>
+         <loc>https://weiguang.github.io/ansible-guide/04-tutorial/</loc>
+         <lastmod>2026-02-05</lastmod>
+    </url>
+    <url>
+         <loc>https://weiguang.github.io/ansible-guide/05-optimization/</loc>
+         <lastmod>2026-02-05</lastmod>
+    </url>
+    <url>
+         <loc>https://weiguang.github.io/ansible-guide/06-errors/</loc>
+         <lastmod>2026-02-05</lastmod>
+    </url>
+</urlset>
