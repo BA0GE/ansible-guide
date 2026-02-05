@@ -1,35 +1,35 @@
-# 02-Prerequisites
+# 02-环境准备 (Prerequisites)
 
-## 1. Control Node
+## 1. 控制节点 (Control Node)
 
-*   **Hardware Requirements**:
-    *   CPU: 2 Cores+ (Concurrent connections consume CPU)
-    *   RAM: 4GB+ (Ansible itself is lightweight, but forking many processes consumes memory)
-*   **OS Support**:
+*   **硬件要求**:
+    *   CPU: 2 核以上 (并发连接会消耗 CPU 资源)
+    *   RAM: 4GB 以上 (Ansible 自身很轻量，但大量 Fork 进程会消耗内存)
+*   **操作系统支持**:
     *   ✅ Linux (RHEL, CentOS, Ubuntu, Debian)
     *   ✅ macOS
-    *   ❌ Windows (Not supported natively as a Control Node; use **WSL2**)
-*   **Software Dependencies**:
-    *   Python 3.8+ (Core runtime)
-    *   `pip` (Package manager)
+    *   ❌ Windows (原生不支持作为控制节点，需使用 **WSL2**)
+*   **软件依赖**:
+    *   Python 3.8+ (核心运行时)
+    *   `pip` (包管理器)
 
-## 2. Managed Nodes
+## 2. 受控节点 (Managed Nodes)
 
-*   **Basic Requirements**:
-    *   **Python**: Python 2.7+ or Python 3.5+. Ansible modules need to run Python code on the target machine.
-        *   *Troubleshooting*: If the target is a minimal container (like Alpine), Python is missing by default. Use the `raw` module to install Python first.
-    *   **SSH Server**: Ensure `sshd` service is on and listening (default port 22).
-    *   **SFTP**: Defaults to SFTP for file transfer. If `sshd_config` disables SFTP, configure Ansible to use `scp` mode.
+*   **基本要求**:
+    *   **Python**: Python 2.7+ 或 Python 3.5+。Ansible 的模块需要在目标机上运行 Python 代码。
+        *   *常见错误排查 (Troubleshooting)*: 如果目标机是极简容器 (如 Alpine)，默认没有 Python，需使用 `raw` 模块先安装 Python。
+    *   **SSH Server**: 确保 `sshd` 服务开启并在监听（默认端口 22）。
+    *   **SFTP**: 默认依赖 SFTP 传输文件。如果 `sshd_config` 禁用了 SFTP，需配置 Ansible 使用 `scp` 模式。
 
-## 3. Connectivity Check
+## 3. 连通性自检 (Connectivity Check)
 
 ```bash
-# Ad-hoc command test
-# -m ping: Calls the ping module (Not ICMP ping, but Python-level connectivity test)
-# -u root: Connect as root user
+# Ad-hoc 临时命令测试
+# -m ping: 调用 ping 模块 (注意：这不是 ICMP ping，而是 Python 级别的连通性测试)
+# -u root: 指定以 root 用户连接
 ansible all -m ping -u root
 ```
 
-### Common Errors (Troubleshooting)
-*   `"msg": "module configuration failed"` -> Target machine missing Python environment.
-*   `"msg": "Permission denied (publickey)"` -> SSH public key not correctly distributed (`ssh-copy-id`).
+### 常见错误排查 (Troubleshooting)
+*   `"msg": "module configuration failed"` -> 目标机缺少 Python 环境。
+*   `"msg": "Permission denied (publickey)"` -> SSH 公钥未正确分发 (`ssh-copy-id`)。

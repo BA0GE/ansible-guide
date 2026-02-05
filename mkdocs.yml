@@ -1,6 +1,6 @@
-site_name: Ansible System Guide
+site_name: Ansible 系统化指南
 site_url: https://weiguang.github.io/ansible-guide
-site_description: A production-grade systematic guide for Ansible.
+site_description: 一份具备生产级参考价值的 Ansible 系统化教程。
 site_author: Architect
 
 repo_name: ansible-guide
@@ -8,20 +8,20 @@ repo_url: https://github.com/weiguang/ansible-guide
 
 theme:
   name: material
-  language: en
+  language: zh
   palette:
     - scheme: default
-      primary: red      # Ansible Brand Color
+      primary: red      # Ansible 品牌色
       accent: red
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
+        name: 切换至暗色模式
     - scheme: slate
       primary: red
       accent: red
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: 切换至亮色模式
   features:
     - navigation.expand
     - navigation.indexes
@@ -43,10 +43,10 @@ markdown_extensions:
   - attr_list
 
 nav:
-  - Home: index.md
-  - 01 Concept: 01-concepts/index.md
-  - 02 Prerequisites: 02-prerequisites/index.md
-  - 03 Deep Dive: 03-deep-dive/index.md
-  - 04 Tutorial: 04-tutorial/index.md
-  - 05 Optimization: 05-optimization/index.md
-  - 06 Error Reference: 06-errors/index.md
+  - 首页: index.md
+  - 01 核心概念: 01-concepts/index.md
+  - 02 环境准备: 02-prerequisites/index.md
+  - 03 深度解析: 03-deep-dive/index.md
+  - 04 实战教程: 04-tutorial/index.md
+  - 05 高级调优: 05-optimization/index.md
+  - 06 错误代码: 06-errors/index.md

@@ -1,16 +1,16 @@
-# Ansible System Guide
+# Ansible 系统化指南
 
-Welcome to the **Ansible System Guide**. This documentation provides a production-grade, deep-dive reference for Ansible automation.
+欢迎来到 **Ansible 系统化指南**。本文档旨在提供一份具备生产级参考价值的 Ansible 自动化深度参考手册。
 
-## Project Overview
+## 项目总览
 
-Ansible is an **Agentless** automation engine that uses **SSH** and **Idempotency** to transform complex configuration management, application deployment, and task orchestration into readable **YAML** playbooks.
+Ansible 是一款 **无代理 (Agentless)** 的自动化运维引擎，它利用 **SSH** 协议和 **幂等性 (Idempotency)** 机制，将复杂的配置管理、应用部署和任务编排过程转化为可读性极高的 **YAML** 剧本 (Playbooks)。
 
-## Core Chapters
+## 核心章节
 
-- **[01 Concept & Philosophy](01-concepts/index.md)**: Understand the "Why" and "How" of Ansible's architecture.
-- **[02 Prerequisites](02-prerequisites/index.md)**: Hardware, OS, and software requirements.
-- **[03 Deep Dive](03-deep-dive/index.md)**: Underlying principles and mechanics.
-- **[04 Step-by-Step Tutorial](04-tutorial/index.md)**: Modular implementation guide.
-- **[05 Advanced Optimization](05-optimization/index.md)**: Performance tuning and best practices.
-- **[06 Error Reference](06-errors/index.md)**: Troubleshooting and error codes.
+- **[01 核心概念与哲学](01-concepts/index.md)**: 理解 Ansible 架构设计的 "Why" 和 "How"。
+- **[02 环境准备](02-prerequisites/index.md)**: 硬件、操作系统及软件依赖要求。
+- **[03 深度解析](03-deep-dive/index.md)**: 底层原理与运行机制。
+- **[04 分步实战教程](04-tutorial/index.md)**: 模块化的实施指南。
+- **[05 高级调优](05-optimization/index.md)**: 性能调优与最佳实践。
+- **[06 错误代码索引](06-errors/index.md)**: 故障排查与错误码速查。
