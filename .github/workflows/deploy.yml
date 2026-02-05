@@ -1,0 +1,34 @@
+name: Deploy Ansible Guide
+
+# Trigger: Push to main branch
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write # Allow GITHUB_TOKEN to push to gh-pages branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout Code
+      - uses: actions/checkout@v4
+
+      # 2. Setup Python Environment
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      # 3. Install Dependencies
+      # mkdocs-material: The theme used
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material
+
+      # 4. Build and Deploy
+      # Automatically build static files and force push to gh-pages
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force
